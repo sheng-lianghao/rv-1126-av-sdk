@@ -21,7 +21,6 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBAVCODEC    REQUIRED libavcodec)
 pkg_check_modules(LIBAVFORMAT   REQUIRED libavformat)
 pkg_check_modules(LIBAVUTIL     REQUIRED libavutil)
-pkg_check_modules(LIBSWSCALE    REQUIRED libswscale)
 pkg_check_modules(LIBSWRESAMPLE REQUIRED libswresample)
 pkg_check_modules(ALSA          REQUIRED alsa)
 
@@ -50,7 +49,6 @@ target_include_directories(avsdk
             ${LIBAVCODEC_INCLUDE_DIRS}
             ${LIBAVFORMAT_INCLUDE_DIRS}
             ${LIBAVUTIL_INCLUDE_DIRS}
-            ${LIBSWSCALE_INCLUDE_DIRS}
             ${LIBSWRESAMPLE_INCLUDE_DIRS}
             ${ALSA_INCLUDE_DIRS}
 )
@@ -66,7 +64,6 @@ target_link_libraries(avsdk PUBLIC
     ${LIBAVFORMAT_LIBRARIES}
     ${LIBAVCODEC_LIBRARIES}
     ${LIBAVUTIL_LIBRARIES}
-    ${LIBSWSCALE_LIBRARIES}
     ${LIBSWRESAMPLE_LIBRARIES}
     ${ALSA_LIBRARIES}
     pthread
